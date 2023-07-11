@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SignUp form ~Rytcareer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./stylesheets/form.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="bg">
+    <div class="logo text-center">
+        <h1>Rytcareer</h1>
+      </div>
+      <div class="wrapper">
+        <div class="inner-warpper text-center">
+          <h2 class="title">Make An Account</h2>
+      
+          <form action="/register" method="post" id="formvalidate">
+            <div class="input-group">
+              <!-- <label class="palceholder" for="userName">Full Name</label> -->
+              <input class="form-control" name="username" type="text" placeholder="Full Name" />
+              <span class="lighting"></span>
+            </div>
+            <div class="input-group">
+                <!-- <label class="palceholder" for="userName">Email</label> -->
+                <input class="form-control" name="email"  type="text" placeholder="Email" />
+                <span class="lighting"></span>
+              </div>
+              <div class="input-group">
+                <!-- <label class="palceholder" for="userName">Email</label> -->
+                <input class="form-control" name="number"  type="text" placeholder="Number" />
+                <span class="lighting"></span>
+              </div>
+            <div class="input-group">
+              <!-- <label class="palceholder" for="userPassword">Password</label> -->
+              <input class="form-control" name="password" id="userPassword" type="password" placeholder="Password" />
+              <span class="lighting"></span>
+            </div>
+      
+            <button type="submit" id="login">Login</button>
+            <div class="clearfix supporter">
+              <div class="pull-left remember-me">
+                <input id="rememberMe" type="checkbox">
+                <label for="rememberMe">Remember Me</label>
+              </div>
+              <a class="forgot pull-right" href="#">Forgot Password?</a>
+            </div>
+          </form>
+      
+        </div>
+        <div class="signup-wrapper text-center">
+          <a href="/form"><span class="text-primary">Already have an account</span></a>
+        </div>
+      </div>
+</div>
+
+
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'>
+
+</script><script  src="./javascripts/script.js"></script>
+
+</body>
+</html>

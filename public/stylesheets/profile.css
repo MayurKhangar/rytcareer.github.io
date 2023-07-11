@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 80vh; */
+}
+.profilecard{
+    margin-top: 14rem;
+    padding: 2rem ;
+    /* height: 60vh;
+    width: 30vw; */
+    /* background-color: rgb(249, 244, 238); */
+}
+.profilecard h1{
+    font-weight: 200;
+   
+}
+.profilecard span{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.profilecard button {
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 28px;
+}
+.imgprofile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  text-align: center;
+}
+.imgprofile img{
+    height: 14vh;
+    width: 14vh;
+}
+#btnup{
+    padding: 6px 10px;
+}

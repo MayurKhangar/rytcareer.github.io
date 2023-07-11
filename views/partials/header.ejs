@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rytcareer- An online education platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+
+
+</head>
+
+<body>
+
+    <header class="navbarstat">
+        <nav>
+            <a href="#home" id="logo">Rytcareer</a>
+            <i class="fas fa-bars" id="ham-menu"></i>
+            <ul id="nav-bar">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/explore">Courses</a>
+                </li>
+                <li>
+                    <a href="/profile">Profile</a>
+                </li>
+                <li>
+                    <a href="/pdffolder">Blog</a>
+                </li>
+                <li>
+                    <a href="/event">Event</a>
+                </li>
+                <div class="changelogged">
+                    <li>
+                        <a id="loginLink" href="/form">Login</a>
+                    </li>
+                    <li>
+                        <a id="logoutLink" href="/logout" style="display: none;">Logout</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Script -->
+
+
+    <script>
+        const loginLink = document.getElementById('loginLink');
+        const logoutLink = document.getElementById('logoutLink');
+
+        // Check the user's login state (example: using a boolean variable)
+        let isLoggedIn = localStorage.getItem('isLoggedIn')==='true';
+
+        // Function to toggle the navbar based on the login state
+        function toggleNavbars() {
+            if (isLoggedIn) {
+                loginLink.style.display = 'none';
+                logoutLink.style.display = 'block';
+            } else {
+                loginLink.style.display = 'block';
+                logoutLink.style.display = 'none';
+            }
+        }
+
+        // Call the toggleNavbar function initially to set the initial state
+        toggleNavbars();
+
+        // Example event listener to handle login/logout action
+        loginLink.addEventListener('click', () => {
+            // Perform login actions
+            localStorage.setItem('isLoggedIn',true);
+            isLoggedIn = true;
+            toggleNavbars();
+        });
+
+        logoutLink.addEventListener('click', () => {
+            // Perform logout actions
+            localStorage.setItem('isLoggedIn',false);
+            isLoggedIn = false;
+            toggleNavbar();
+        });
+        toggleNavbars();
+    </script>
+    <script src="./javascripts/script.js"></script>
+</body>
+
+</html>

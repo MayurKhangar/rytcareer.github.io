@@ -1,0 +1,40 @@
+<% include ./partials/header.ejs %>
+<link rel="stylesheet" href="./stylesheets/profile.css" />
+    
+    
+    <div class="bg">
+        <div class="profilecard">
+            <h1 style="text-align: center;padding: 1rem 0;">Profile</h1>
+            <h1> <span>
+                    <div class="imgprofile">
+                        <div class="profile">
+                            <img src="../images/uploads/<%= user.image %>" alt="" srcset="">
+                            <form action="/uploads" method="post" enctype="multipart/form-data">
+                            <input type="file" name="image" id="">
+                            <button id="btnup" type="submit">upload</button>
+                        </form>
+                        </div>
+                    </div>
+                </span> </h1>
+
+
+            <h1>Name: <span>
+                    <%= user.username %>
+                </span> </h1>
+            <h1>Number: <span>
+                    <%= user.number %>
+                </span> </h1>
+            <h1>Email: <span>
+                    <%= user.email %>
+                </span> </h1>
+            <br>
+
+            <div class="buttn">
+                <button> <a href="/logout">logout</a></button>
+            </div>
+        </div>
+    </div>
+    <% include ./partials/footer.ejs %>
+
+
+    
